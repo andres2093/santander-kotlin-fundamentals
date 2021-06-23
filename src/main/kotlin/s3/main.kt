@@ -46,10 +46,17 @@ fun main() {
 
     val mario = Mario()
 
-    for(i in 1..5){
-        mario.collision("Goomba")
-        println("Tienes: ${mario.getLives()}")
-    }
+    /*for(i in 1..5){
+        //mario.collision("Goomba")
+        //println("Tienes: ${mario.getLives()}")
+        if(mario.isAlive){
+            mario.collision("Goomba")
+            println("Te quedan ${mario.getLives()}")
+        }
+    }*/
 
+    mario.collision("Goomba")
+
+    mario.collision("Star")
 
 }
