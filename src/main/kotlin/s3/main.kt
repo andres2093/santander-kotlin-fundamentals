@@ -10,9 +10,35 @@ fun main() {
     myPhone.turnOn()
     myPhone.getTurn()
 
-    val myPhone1 = Phone()
+    println("----------------------")
 
-    myPhone1.getTurn()
-    myPhone1.turnOn()
-    myPhone1.getTurn()
+    val miVehiculo = Vehiculo(
+        color = "azul",
+        marca = "Volkswagen",
+        modelo = "Pointer"
+    )
+
+    println("El coche está prendido? ${miVehiculo.encendido}")
+    miVehiculo.encender()
+    println("El coche está prendido? ${miVehiculo.encendido}")
+
+    println("El tanque tiene ${miVehiculo.gasolina}")
+    miVehiculo.recargar(20.07f)
+    println("El tanque tiene ${miVehiculo.gasolina}")
+
+    println("----------------------")
+
+    val miVehiculoConst = VehiculoConst(
+        "Volkswagen",
+        "Pointer",
+        "azul"
+    )
+
+    println("El coche está prendido? ${miVehiculoConst.encendido}")
+    miVehiculoConst.encender()
+    println("El coche está prendido? ${miVehiculoConst.encendido}")
+
+    println("El tanque tiene ${miVehiculoConst.gasolina}")
+    miVehiculoConst.recargar(20.07f)
+    println("El tanque tiene ${miVehiculoConst.gasolina}")
 }
