@@ -4,7 +4,7 @@ fun main() {
 
     val myPhone = Phone()
 
-    myPhone.isOn = true
+    //myPhone.isOn = true
 
     myPhone.getTurn()
     myPhone.turnOn()
@@ -41,4 +41,15 @@ fun main() {
     println("El tanque tiene ${miVehiculoConst.gasolina}")
     miVehiculoConst.recargar(20.07f)
     println("El tanque tiene ${miVehiculoConst.gasolina}")
+
+    println("----------------------")
+
+    val mario = Mario()
+
+    for(i in 1..5){
+        mario.collision("Goomba")
+        println("Tienes: ${mario.getLives()}")
+    }
+
+
 }

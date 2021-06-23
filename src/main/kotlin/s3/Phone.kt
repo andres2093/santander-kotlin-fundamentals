@@ -2,7 +2,7 @@ package s3
 
 class Phone {
 
-    var isOn = false
+    private var isOn = false
 
     fun turnOn(){
         isOn = true
