@@ -1,4 +1,4 @@
-package E1;
+package e1;
 
 public class User {
     private String name;
