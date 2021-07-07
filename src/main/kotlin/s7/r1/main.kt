@@ -26,12 +26,15 @@ fun main() {
     println(person.getFullName())
 }
 class Person(
-    private val name:String,
+    val name:String? = null,
     private val lastName:String? = null){
 
     fun getFullName(): String {
         val lName =  lastName ?: throw IllegalArgumentException("Necesitas apellidos")
         return "$name $lName"
+    }
+    fun fail(message: String): Nothing {
+        throw IllegalArgumentException(message)
     }
     fun getLastName() : String {
         val lName = lastName ?: return "No se encontró apellido"
