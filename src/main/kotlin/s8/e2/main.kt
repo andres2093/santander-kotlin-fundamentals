@@ -13,19 +13,20 @@ inline fun measureTimeMillis(block: () -> Unit){
 }
 
 fun main() {
-//    Corroutines
-//    val almacenarNumeros = AtomicLong()
-//
-//    measureTimeMillis {
-//        for(i in 1..1_000_000L){
-//            GlobalScope.launch {
-//                almacenarNumeros.addAndGet(i)
-//            }
-//        }
-//    }
-//
-//    println("Valor de ${almacenarNumeros.get()}")
+//    Coroutines
+    val almacenarNumeros = AtomicLong()
 
+    measureTimeMillis {
+        for(i in 1..1_000_000L){
+            GlobalScope.launch {
+                almacenarNumeros.addAndGet(i)
+            }
+        }
+    }
+
+    println("Valor de ${almacenarNumeros.get()}")
+
+//    thread
     val almacenarNumerosThread = AtomicLong()
 
     measureTimeMillis {
