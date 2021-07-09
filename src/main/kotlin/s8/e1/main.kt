@@ -20,10 +20,20 @@ fun main() {
 //    Thread.sleep(3000)
 //    println("Termina")
 
-    runBlocking {     // bloquear el hilo donde se corre
-        delay(2000L)  //proceso de suspensión de 2 segundos
-    }
-    println("bloqueo por corrutina de 2 segundos finalizado")
+//    runBlocking {     // bloquear el hilo donde se corre
+//        delay(2000L)  //proceso de suspensión de 2 segundos
+//    }
+//    println("bloqueo por corrutina de 2 segundos finalizado")
 
+//----------------- Reto 1 -----------------
+// 1
+//    delay(1000)
 
+//  2
+//    GlobalScope.launch {
+////        Thread.sleep(1000)
+//        println("Delay de un segundo")
+//    }
+
+//----------------- Reto 1 -----------------
 }
