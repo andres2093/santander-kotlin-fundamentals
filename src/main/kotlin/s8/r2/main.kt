@@ -7,7 +7,7 @@ import kotlinx.coroutines.runBlocking
 
 fun main() {
     //obteniendo un solo precio
-    runBlocking{
+    runBlocking {
         val price = getScooterPrice()
         println("El precio del scooter es: $price")
     }
@@ -15,7 +15,7 @@ fun main() {
     println("----------------------------")
 
     //obteniendo el precio del scooter y la play 4 secuencialmente
-    val secuentialTime = measureTimeMillis {
+    measureTimeMillis {
         runBlocking {
             val scooterPrice = getScooterPrice()
             val ps4Price = getPs4Price()
@@ -24,12 +24,11 @@ fun main() {
             println("El precio total es: $totalPrice")
         }
     }
-    println("tiempo transcurrido en secuencial: $secuentialTime segundos")
 
     println("----------------------------")
 
     //obteniendo el precio del scooter y la play 4 de forma asíncrona
-    val asyncTime = measureTimeMillis {
+    measureTimeMillis {
         runBlocking {
             val scooterResult = async { getScooterPrice() }
             val ps4Result = async { getPs4Price() }
@@ -38,16 +37,15 @@ fun main() {
             println("El precio total es: $totalPrice")
         }
     }
-    println("tiempo transcurrido en asíncrono: $asyncTime segundos")
 }
 
-suspend fun getScooterPrice():Long{
+suspend fun getScooterPrice(): Long {
     println("Obteniendo precio...")
     delay(2_000)
     return 2400L
 }
 
-suspend fun getPs4Price():Long{
+suspend fun getPs4Price(): Long {
     println("Obteniendo precio...")
     delay(3_000)
     return 5299L
